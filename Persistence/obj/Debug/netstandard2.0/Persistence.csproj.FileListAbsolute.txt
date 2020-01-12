@@ -1,0 +1,11 @@
+/Users/shreyans/Development/ReactCSharp/Persistence/bin/Debug/netstandard2.0/Persistence.deps.json
+/Users/shreyans/Development/ReactCSharp/Persistence/bin/Debug/netstandard2.0/Persistence.dll
+/Users/shreyans/Development/ReactCSharp/Persistence/bin/Debug/netstandard2.0/Persistence.pdb
+/Users/shreyans/Development/ReactCSharp/Persistence/bin/Debug/netstandard2.0/Domain.dll
+/Users/shreyans/Development/ReactCSharp/Persistence/bin/Debug/netstandard2.0/Domain.pdb
+/Users/shreyans/Development/ReactCSharp/Persistence/obj/Debug/netstandard2.0/Persistence.csprojAssemblyReference.cache
+/Users/shreyans/Development/ReactCSharp/Persistence/obj/Debug/netstandard2.0/Persistence.AssemblyInfoInputs.cache
+/Users/shreyans/Development/ReactCSharp/Persistence/obj/Debug/netstandard2.0/Persistence.AssemblyInfo.cs
+/Users/shreyans/Development/ReactCSharp/Persistence/obj/Debug/netstandard2.0/Persistence.csproj.CopyComplete
+/Users/shreyans/Development/ReactCSharp/Persistence/obj/Debug/netstandard2.0/Persistence.dll
+/Users/shreyans/Development/ReactCSharp/Persistence/obj/Debug/netstandard2.0/Persistence.pdb
