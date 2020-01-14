@@ -63,3 +63,5 @@
 /Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/MediatR.dll
+/Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/MediatR.Extensions.Microsoft.DependencyInjection.dll
