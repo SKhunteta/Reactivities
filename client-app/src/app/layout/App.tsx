@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, Fragment, Component } from 'react';
 import { Header, Icon, List } from 'semantic-ui-react';
 import axios from 'axios';
 import { IActivity } from '../models/activity';
+import NavBar from '../../features/nav/navbar';
 
 interface IState {
   activities: IActivity[]
@@ -23,10 +24,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header as='h2'>
-          <Icon name='users' />
-          <Header.Content>Reactivities</Header.Content>
-        </Header>
+        <NavBar />
         <List>
           {this.state.activities.map((activity) => (
             <List.Item key={activity.id}>{activity.title}</List.Item>
