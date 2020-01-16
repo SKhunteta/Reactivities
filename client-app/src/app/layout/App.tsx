@@ -5,6 +5,7 @@ import { IActivity } from '../models/activity';
 import NavBar from '../../features/nav/NavBar';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
 import agent from '../api/agent';
+import LoadingComponent from './LoadingComponent';
 
 const App = () => {
   const [activities, setActivities] = useState<IActivity[]>([]);
@@ -12,6 +13,7 @@ const App = () => {
     null
   );
   const [editMode, setEditMode] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const handleOpenCreateForm = () => {
     setSelectedActivity(null);
@@ -19,19 +21,25 @@ const App = () => {
   }
 
   const handleCreateActivity = (activity: IActivity) => {
+    agent.Activities.create(activity).then(() => {
     setActivities([...activities, activity]);
     setSelectedActivity(activity);
     setEditMode(false);
+    })
   }
 
   const handleEditActivity = (activity: IActivity) => {
-    setActivities([...activities.filter(a => a.id !== activity.id), activity])
-    setSelectedActivity(activity);
-    setEditMode(false);
+    agent.Activities.update(activity).then(() => {
+      setActivities([...activities.filter(a => a.id !== activity.id), activity])
+      setSelectedActivity(activity);
+      setEditMode(false);
+    })
   }
 
   const handleDeleteActivity = (id: string) => {
+    agent.Activities.delete(id).then(() => {
     setActivities([...activities.filter(a => a.id !== id)])
+    })
   }
 
   const handleSelectActivity = (id: string) => {
@@ -48,8 +56,10 @@ const App = () => {
           activities.push(activity);
         })
         setActivities(activities);
-      });
+      }).then(() => setLoading(false));
   }, []);
+
+  if (loading) return <LoadingComponent content='Loading activities...'> </LoadingComponent>
 
   return (
     <Fragment>
