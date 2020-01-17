@@ -54,18 +54,10 @@ const App = () => {
   };
 
   useEffect(() => {
-    agent.Activities.list()
-      .then(response => {
-        let activities: IActivity[] = [];
-        response.forEach((activity) => {
-          activity.date = activity.date.split('.')[0]
-          activities.push(activity);
-        })
-        setActivities(activities);
-      }).then(() => setLoading(false));
-  }, []);
+    activityStore.loadActivities();
+  }, [activityStore]);
 
-  if (loading) return <LoadingComponent content='Loading activities...'> </LoadingComponent>
+  if (activityStore.loadingInitial) return <LoadingComponent content='Loading activities...'> </LoadingComponent>
 
   return (
     <Fragment>
@@ -73,7 +65,7 @@ const App = () => {
       <Container style={{ marginTop: '7em' }}>
         
         <ActivityDashboard
-          activities={activities}
+          activities={activityStore.activities}
           selectActivity={handleSelectActivity}
           selectedActivity={selectedActivity}
           editMode={editMode}
