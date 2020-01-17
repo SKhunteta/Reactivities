@@ -18,6 +18,7 @@ const App = () => {
   const [editMode, setEditMode] = useState(false);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
+  const [target, setTarget] = useState('');
 
   const handleOpenCreateForm = () => {
     setSelectedActivity(null);
@@ -44,6 +45,7 @@ const App = () => {
 
   const handleDeleteActivity = (id: string) => {
     setSubmitting(true);
+    
     agent.Activities.delete(id).then(() => {
     setActivities([...activities.filter(a => a.id !== id)])
     }).then(() => setSubmitting(false));
@@ -67,14 +69,13 @@ const App = () => {
         <ActivityDashboard
           activities={activityStore.activities}
           selectActivity={handleSelectActivity}
-          selectedActivity={selectedActivity}
-          editMode={editMode}
           setEditMode={setEditMode}
           setSelectedActivity={setSelectedActivity}
           createActivity={handleCreateActivity}
           editActivity={handleEditActivity}
           deleteActivity={handleDeleteActivity}
           submitting={submitting}
+          target={target}
         />
       </Container>
     </Fragment>
