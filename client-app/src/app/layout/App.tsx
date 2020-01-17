@@ -7,6 +7,7 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import agent from '../api/agent';
 import LoadingComponent from './LoadingComponent';
 import ActivityStore from '../stores/activityStore'
+import {observer} from 'mobx-react-lite'
 
 const App = () => {
   const activityStore = useContext(ActivityStore);
@@ -81,4 +82,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default observer(App);
