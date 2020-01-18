@@ -7,6 +7,7 @@ import {observer} from 'mobx-react-lite';
 import ActivityStore from '../stores/activityStore';
 import { Route } from 'react-router-dom';
 import HomePage from '../../features/home/HomePage'
+import ActivityDetails from '../../features/activities/details/ActivityDetails';
 
 const App = () => {
   const activityStore = useContext(ActivityStore)
@@ -22,7 +23,8 @@ const App = () => {
       <NavBar />
       <Container style={{ marginTop: '7em' }}>
         <Route path='/' component={HomePage}/>
-        <Route path='/activities' component={ActivityDashboard} />
+        <Route path='/' component={ActivityDashboard} />
+        <Route path='/activities/:id' component={ActivityDetails} />
         <Route path='/createActivity' component={HomePage} />
       </Container>
     </Fragment>
