@@ -41,7 +41,7 @@ const ActivityDetails: React.FC<RouteComponentProps<DetailParams>> = ({match, hi
             content='Edit'
           />
           <Button
-            onClick={() => history.goBack()}
+            onClick={() => history.push('/activities')}
             basic
             color='grey'
             content='Cancel'
