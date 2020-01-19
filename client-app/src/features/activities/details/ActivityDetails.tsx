@@ -2,14 +2,14 @@ import React, { useContext, useEffect } from 'react';
 import { Card, Image, Button } from 'semantic-ui-react';
 import ActivityStore from '../../../app/stores/activityStore';
 import { observer } from 'mobx-react-lite';
-import { Route, RouteComponentProps } from 'react-router-dom';
+import { Route, RouteComponentProps, Link } from 'react-router-dom';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 
 interface DetailParams {
   id: string
 }
 
-const ActivityDetails: React.FC<RouteComponentProps<DetailParams>> = ({match}) => {
+const ActivityDetails: React.FC<RouteComponentProps<DetailParams>> = ({match, history}) => {
   const activityStore = useContext(ActivityStore);
   const { activity, openEditForm, cancelSelectedActivity, loadActivity, loadingInitial } = activityStore;
 
@@ -35,13 +35,13 @@ const ActivityDetails: React.FC<RouteComponentProps<DetailParams>> = ({match}) =
       <Card.Content extra>
         <Button.Group widths={2}>
           <Button
-            onClick={() => openEditForm(activity!.id)}
+            as={Link} to={`/manage/${activity.id}`}
             basic
             color='blue'
             content='Edit'
           />
           <Button
-            onClick={cancelSelectedActivity}
+            onClick={() => history.goBack()}
             basic
             color='grey'
             content='Cancel'

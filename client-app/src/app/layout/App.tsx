@@ -25,7 +25,7 @@ const App = () => {
         <Route path='/' component={HomePage}/>
         <Route path='/' component={ActivityDashboard} />
         <Route path='/activities/:id' component={ActivityDetails} />
-        <Route path='/createActivity' component={HomePage} />
+        <Route path={['/createActivity', '/manage/:id']} component={HomePage} />
       </Container>
     </Fragment>
   );
