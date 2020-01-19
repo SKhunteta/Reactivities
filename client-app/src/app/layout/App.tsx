@@ -8,6 +8,7 @@ import ActivityStore from '../stores/activityStore';
 import { Route } from 'react-router-dom';
 import HomePage from '../../features/home/HomePage'
 import ActivityDetails from '../../features/activities/details/ActivityDetails';
+import ActivityForm from '../../features/activities/form/ActivityForm';
 
 const App = () => {
   const activityStore = useContext(ActivityStore)
@@ -25,7 +26,7 @@ const App = () => {
         <Route path='/' component={HomePage}/>
         <Route path='/' component={ActivityDashboard} />
         <Route path='/activities/:id' component={ActivityDetails} />
-        <Route path={['/createActivity', '/manage/:id']} component={HomePage} />
+        <Route path={['/createActivity', '/manage/:id']} component={ActivityForm} />
       </Container>
     </Fragment>
   );
