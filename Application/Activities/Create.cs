@@ -24,6 +24,7 @@ namespace Application.Activities
           
             public string City { get; set; }
          
+         //comment for a test.
             public string Venue { get; set; }
         }
 
