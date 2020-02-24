@@ -65,3 +65,7 @@
 /Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
 /Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/MediatR.dll
 /Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/FluentValidation.dll
+/Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/FluentValidation.AspNetCore.dll
+/Users/shreyans/Development/ReactCSharp/API/bin/Debug/netcoreapp3.1/FluentValidation.DependencyInjectionExtensions.dll
+/Users/shreyans/Development/ReactCSharp/API/obj/Debug/netcoreapp3.1/API.MvcApplicationPartsAssemblyInfo.cs
