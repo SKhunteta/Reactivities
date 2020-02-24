@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Domain;
 using MediatR;
 using Persistence;
+using FluentValidation;
 
 namespace Application.Activities
 {
@@ -27,6 +28,8 @@ namespace Application.Activities
          //comment for a test.
             public string Venue { get; set; }
         }
+
+        
 
         public class Handler : IRequestHandler<Command>
         {
