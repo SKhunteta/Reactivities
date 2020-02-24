@@ -29,7 +29,12 @@ namespace Application.Activities
             public string Venue { get; set; }
         }
 
-        
+        public class CommandValidator: AbstractValidator<Command> {
+            public CommandValidator() 
+            {
+                RuleForEach(x => x.Title).NotEmpty();
+            }
+        }
 
         public class Handler : IRequestHandler<Command>
         {
